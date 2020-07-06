@@ -1,0 +1,83 @@
+// main: ../style.less
+
+
+.about {
+    margin: 84px 0;
+}
+
+
+
+.about__inner {
+    display: flex;
+    max-width: 1090px;
+}
+
+
+
+.about__photo,
+.about__content {
+    width: 50%;
+}
+
+.about__content {
+    margin-top: 30px;
+}
+
+
+.about__photo {
+    padding-right: 48px;
+    position: relative;
+}
+
+
+.img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.about__img--backside {
+    position: absolute;
+    width: 413px;
+    height: 413px;
+    background-color: #efefef;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+
+.about__title {
+    font-size: 45px;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+
+.about__bigtitle {
+    position: relative;
+    left: -10px;
+    margin-bottom: 21px;
+    font-size: 92px;
+    color: fade(@black,15%);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+
+
+
+.about__text {
+    font-size: 12px;
+    color: @grey;
+    line-height: 2;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
