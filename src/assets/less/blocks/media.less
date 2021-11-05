@@ -5,7 +5,6 @@
 
 @media(max-width:1024px) {
     .btn {
-        padding: 1rem 1.2rem;
         margin-bottom: .85rem;
     }
 
@@ -95,11 +94,6 @@
         }
     }
 
-    .btn {
-        min-width: 120px;
-        font-size: 1rem;
-    }
-
     .btn__block {
         display: flex;
     }
@@ -110,6 +104,10 @@
         flex-wrap: wrap;
         margin-top: 0;
         padding-top: 0;
+    }
+
+    .intro__content {
+        width: 100%;
     }
 
     .intro__photo {
@@ -258,6 +256,11 @@
 }
 
 @media(max-width:425px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+
     .articles {
         grid-template-columns: repeat(1,1fr);
     }

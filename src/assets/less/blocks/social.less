@@ -2,13 +2,15 @@
 
 .social {
     display: flex;
-    
+    flex-wrap: wrap;
     margin-bottom: 3rem;
 }
 
 .social__link {
-    margin-right: .85rem;
+    padding: .5rem;
     transition: transform .2s linear;
+
+    transform: translateX(-.5rem);
 
     &:hover {
         transform: translateY(-10%);
