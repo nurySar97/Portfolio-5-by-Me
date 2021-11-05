@@ -2,21 +2,23 @@
 .btn {
     display: inline-block;
     vertical-align: top;
-    min-width: 170px;
     text-align: center;
     
-    border-radius: 30px;
-    padding: 15px 25px;
     background: none;
     font-family: inherit;
     cursor: pointer;
     line-height: 1.1;
-    font-size: 16px;
+
     text-transform: uppercase;
     text-decoration: none;
-    transition: background .2s linear,
-    color .2s linear, box-shadow .2s linear,
-    border .2s linear;
+    transition: background .25s linear,
+    color .25s linear, box-shadow .25s linear,
+    border .25s linear;
+
+    font-size: 1rem;
+    min-width: 10rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
 
     border: 1px solid @grey;
     color: @black;
@@ -26,30 +28,31 @@
     }
 
     &:hover {
+        box-shadow: 2px 2px 10px fade(#000, 24%);
+
+        border-color: @black;
         background-color: @black;
         color: @white;
-        box-shadow: 2px 2px 10px fade(#000, 24%);
-        border-color: @black;
     }
 
     + .btn {
-        margin-left: 15px;
+        margin-left: 1rem;
     }
 
     // Modificators
 
     &--small {
         min-width: 0;
-        padding: .7em 1.3em;
-        font-size: 14px;
         font-weight: 700;
         border-width: 2px;
+
+        font-size: .85rem;
+        padding: .75em 1.5em;
     }
 
     &--thin {
-        min-width: 140px;
         font-size: .8rem;
-         
+        min-width: 8rem;
     }
 
 }

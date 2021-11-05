@@ -7,13 +7,14 @@
 
 .nav__link {
     position: relative;
-    margin-left: 30px;
-    font-style: 14px;
-    color: @black;
-
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+
+    font-size: 1rem;
+    margin-left: 2rem;
+
+    color: @black;
 
     &:after {
         content: "";
@@ -38,13 +39,13 @@
     }
 
     &--btn {
-        padding: 10px 30px;
-        border: 2px solid @black;
-        border-radius: 20px;
-
         transition: background-color .2s linear,
         color .2s linear;
 
+        padding: .85rem 2rem;
+        border-radius: 1.2rem;
+
+        border: 2px solid @black;
 
         &:hover {
             background-color: @black;

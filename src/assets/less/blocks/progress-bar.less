@@ -1,13 +1,15 @@
 // main: ../style.less
 
 .progress-bar {
-    margin-bottom: 2.6rem;
+    margin-bottom: 3rem;
 }
 
 .progress-bar__item {
     display: flex;
-    width: 272px;
     align-items: center;
+
+    width: 100%;
+    max-width: 272px;
     margin-bottom: 0.3rem;
 }
 
@@ -16,8 +18,9 @@
 }
 
 .progress-bar__title {
-    font-size: .94rem;
     font-weight: 300;
+
+    font-size: 1rem;
 }
 
 .progress-bar__right {
@@ -26,15 +29,17 @@
 }
 
 .progress-bar__bar {
-    width: 139px;
-
-    height: 6px;
     background-color: #efefef;
+
+    width: 100%;
+    max-width: 150px;
+    height: 5px;
 }
 
 .progress-bar__progress {
-    height: 100%;
-    background-color: @grey;
-
     transition: width 1s linear;
+    
+    height: 100%;
+
+    background-color: @grey;
 }
