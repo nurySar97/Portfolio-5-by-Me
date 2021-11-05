@@ -7,7 +7,6 @@ export default (function () {
     event.preventDefault();
 
     const cat = $(this).data("filter");
-    console.log(cat);
 
     if (cat == "all") {
       $("[data-cat]").removeClass("hide");
