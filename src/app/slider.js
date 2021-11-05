@@ -11,8 +11,8 @@ export default (function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: false,
-    arrows: true,
-    dots: true
+    arrows: false,
+    dots: true,
   });
 
   const slickButtonBack = $("#slick-slide-control00");
@@ -27,4 +27,8 @@ export default (function () {
     slickButtonBack.css({ backgroundColor: "transparent" });
     slickButtonNext.css({ backgroundColor: "#fff" });
   });
+
+  window.onresize = () => {
+    slider.slick("setPosition");
+  };
 })();

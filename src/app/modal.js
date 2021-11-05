@@ -4,14 +4,14 @@ export default (function () {
   // Modal
   const modalCall = $("[data-modal]");
   const modalClose = $("[data-close]");
+  const slider = $(".modal-work__slider");
 
   modalCall.on("click", function (event) {
     event.preventDefault();
-    let $this = $(this);
-    let modalId = $this.data("modal");
+    const $this = $(this);
+    const modalId = $this.data("modal");
 
     $(modalId).addClass("show");
-
     $("body").addClass("no-scroll");
 
     // Animation
@@ -21,13 +21,17 @@ export default (function () {
       });
     }, 200);
 
-    $("#worksSlider").slick("setPosition");
+    setTimeout(() => {
+      slider.slick("setPosition");
+    }, 25);
+
+    slider.slick("setPosition");
   });
 
   modalClose.on("click", function (event) {
     event.preventDefault();
-    let $this = $(this);
-    let modalParent = $this.parents(".modal");
+    const $this = $(this);
+    const modalParent = $this.parents(".modal");
 
     modalParent.find(".modal__dialog").css({
       transform: "rotateX(90deg)",
@@ -41,7 +45,8 @@ export default (function () {
   });
 
   $(".modal").on("click", function (event) {
-    let $this = $(this);
+    event.stopPropagation();
+    const $this = $(this);
     $this.find(".modal__dialog").css({
       transform: "rotateX(90deg)",
     });
@@ -51,11 +56,9 @@ export default (function () {
       $this.removeClass("show");
       $("body").removeClass("no-scroll");
     }, 200);
+  });
 
-    event.preventDefault();
-
-    $(".modal__dialog").on("click", function (event) {
-      event.stopPropagation();
-    });
+  $(".modal__dialog").on("click", function (event) {
+    event.stopPropagation();
   });
 })();
