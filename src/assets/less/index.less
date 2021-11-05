@@ -1,0 +1,73 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+// compress: true
+@import "./variables/index.less";
+
+html,
+body {
+    font-size: 15px;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+
+    color: @black;
+
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.reviews {
+    padding: 48px 0;
+}
+
+@import "./blocks/content.less";
+@import "./blocks/container.less";
+@import "./blocks/header.less";
+@import "./blocks/user.less";
+@import "./blocks/nav.less";
+@import "./blocks/intro.less";
+@import "./blocks/social.less";
+@import "./blocks/btn.less";
+@import "./blocks/works.less";
+@import "./blocks/portfolio.less";
+@import "./blocks/work.less";
+@import "./blocks/about.less";
+@import "./blocks/reviews.less";
+@import "./blocks/news.less";
+@import "./blocks/articles.less";
+@import "./blocks/footer.less";
+@import "./blocks/modal.less";
+@import "./blocks/modal-work.less";
+@import "./blocks/timeline.less";
+@import "./blocks/progress-bar.less";
+@import "./blocks/contact.less";
+@import "./blocks/form.less";
+@import "./blocks/media.less";
+
+@import "./helpers.less";

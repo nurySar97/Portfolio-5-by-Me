@@ -1,0 +1,58 @@
+// main: style.less
+.text__center {
+    text-align: center;
+}
+
+.text__right {
+    text-align: right;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.slick-dots {
+    list-style: none;
+    bottom: 0;
+    position: absolute;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    & li {
+        font-size: 0;
+        margin-right: 10px;
+    }
+
+    & li button {
+        outline: none;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        font-size: 0;
+        border: 1px solid black;
+        cursor: pointer;
+
+        transition: background-color .2s linear;
+
+        &:hover {
+            background-color: fade(@grey, 20%);
+        }
+    }
+}
+
+#slick-slide-control00 {
+    background-color: white;
+}
