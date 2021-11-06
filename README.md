@@ -7,6 +7,5 @@
 - jQuery 
 - Webpack
 - Webpack dev server
-- Slick-carousel 
-
+- 
 <img align="right" alt="GIF" src="./app.gif" />
