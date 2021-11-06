@@ -1,20 +1,37 @@
 .work {
-    box-shadow: 0 0 4px fade(#000,25%);
+    cursor: pointer;
     border-radius: 10px;
     overflow: hidden;
-
     transition: box-shadow .2s linear;
 
+    box-shadow: 0 0 4px fade(@black,25%);
 
     &:hover {
-        box-shadow: 0 0 25px fade(#000,25%);
+        box-shadow: 0 0 25px fade(@black,25%);
     }
 }
 
 .work__image {
+    position: relative;
+    width: 100%;
+    padding-top: 81%;
+    border-bottom: 1px solid rgba(@black, .75);
     display: flex;
     max-width: 100%;
     height: auto;
+    background-color: rgba(@black, .75);
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        display: block;
+        content: "370x300";
+        font-size: 2rem;
+        font-weight: bold;
+        color: @white;
+    }
 }
 
 .work__content {

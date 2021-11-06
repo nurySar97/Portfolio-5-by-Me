@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const IgnoreEmitPlugin = require("ignore-emit-webpack-plugin");
 
+const isDev = true;
+
 const cssLoaders = (text, loader) => {
   return {
     test: text,
@@ -22,7 +24,7 @@ const cssLoaders = (text, loader) => {
 
 const config = {
   context: path.resolve(__dirname, "src"),
-  mode: "production",
+  mode: isDev ? 'development' : 'production',
   entry: {
     index: "./app/index.js",
     "assets/theme/dark": "./assets/less/dark.less",
@@ -48,9 +50,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: "./index.html",
       excludeChunks: ["assets/theme/dark"],
-      minify: {
-        collapseWhitespace: false,
-      },
+      minify: !isDev,
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",

@@ -40,9 +40,26 @@
 }
 
 .articles__photo {
-    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 70%;
+    border: 1px solid @black;
+    display: flex;
     max-width: 100%;
     height: auto;
+    background-color: rgba(@black, .75);
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        display: block;
+        content: "370x257";
+        font-size: 2rem;
+        font-weight: bold;
+        color: @white;
+    }
 }
 
 .articles__content {

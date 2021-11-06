@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/nurySar97/portfolio-website.git",
+  "homepage": "http://nurySar97.github.io/portfolio-website",
   "author": "<nsaryyev9797@gmail.com>",
   "license": "MIT",
   "scripts": {
