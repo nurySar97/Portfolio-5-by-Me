@@ -3,3 +3,4 @@ import "./filter";
 import "./modal";
 import "./slider.js";
 import "./nav";
+import "./theme";
