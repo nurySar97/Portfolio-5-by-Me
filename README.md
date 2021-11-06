@@ -7,5 +7,4 @@
 - jQuery 
 - Webpack
 - Webpack dev server
-- 
 <img align="right" alt="GIF" src="./app.gif" />
