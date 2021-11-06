@@ -2,8 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-
-const filename = (ext) => (true ? `[name].${ext}` : `[name].[hash].${ext}`);
+const IgnoreEmitPlugin = require("ignore-emit-webpack-plugin");
 
 const cssLoaders = (text, loader) => {
   return {
@@ -11,6 +10,9 @@ const cssLoaders = (text, loader) => {
     use: [
       {
         loader: MiniCssExtractPlugin.loader,
+        options: {
+          esModule: false,
+        },
       },
       "css-loader",
       ...(!loader ? [] : [loader]),
@@ -21,10 +23,14 @@ const cssLoaders = (text, loader) => {
 const config = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
-  entry: ["./app/index.js"],
+  entry: {
+    index: "./app/index.js",
+    "assets/theme/dark": "./assets/less/dark.less",
+    "assets/theme/light": "./assets/less/light.less",
+  },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[hash].[id].bundle.js",
+    filename: "[name].bundle.js",
   },
   optimization: {
     splitChunks: {
@@ -34,20 +40,20 @@ const config = {
   devServer: {
     port: 3000,
   },
-  stats:{
-    errorDetails: true
+  stats: {
+    errorDetails: true,
   },
   plugins: [
+    new IgnoreEmitPlugin(["light.bundle.js", "dark.bundle.js"]),
     new HtmlWebpackPlugin({
       template: "./index.html",
-
+      excludeChunks: ["assets/theme/dark"],
       minify: {
         collapseWhitespace: false,
       },
     }),
     new MiniCssExtractPlugin({
-      filename: filename("css"),
-      chunkFilename: "[id].css",
+      filename: "[name].css",
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "./assets/images", to: "./assets/images" }],
@@ -64,7 +70,7 @@ const config = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env"],
-            plugins: ["@babel/plugin-proposal-class-properties"],
+            plugins: [],
           },
         },
       },

@@ -5,7 +5,7 @@ export default (function () {
   slider.on("click", (event) => {
     event.stopPropagation();
   });
-  // Slider: https://kenwheeler.github.io/slick/
+  
   slider.slick({
     infinite: true,
     slidesToShow: 1,

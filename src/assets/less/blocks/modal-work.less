@@ -25,6 +25,19 @@
         margin: 0;
         padding: 0;
     }
+
+    .slick-dots li button:before {
+        color: @white  !important;
+
+        &:hover {
+            color: #FFF !important;
+        }
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: @white;
+        opacity: 1;
+    }
 }
 
 .modal-work__item {
@@ -40,7 +53,7 @@
 .modal-work__content {
     position: relative;
     width: 50%;
-    padding-left: 1rem;
+    padding: 2rem;
 }
 
 .modal-work__header {
@@ -78,7 +91,7 @@
 
     font-size: 1rem;
     margin-bottom: 0.2rem;
-    
+
     color: @black;
 }
 
