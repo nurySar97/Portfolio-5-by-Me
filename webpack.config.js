@@ -22,7 +22,7 @@ const cssLoaders = (text, loader) => {
 
 const config = {
   context: path.resolve(__dirname, "src"),
-  mode: "development",
+  mode: "production",
   entry: {
     index: "./app/index.js",
     "assets/theme/dark": "./assets/less/dark.less",
