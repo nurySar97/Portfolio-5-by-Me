@@ -1,7 +1,8 @@
 import $ from "jquery";
 const sun = `<i class="fas fa-sun" />`;
 const moon = `<i class="far fa-moon" />`;
-const initTheme = localStorage.getItem("theme-webpack-portfolio");
+const storageName = 'theme-webpack-portfolio';
+const initTheme = localStorage.getItem(storageName);
 const theme = { current: initTheme || "light" };
 const $themeBtn = $(".header__theme-btn");
 
@@ -24,7 +25,7 @@ export default (function () {
 
   function setTheme(template) {
     $styleSheet.attr("href", getTheme(theme.current));
-    localStorage.setItem("theme", theme.current);
+    localStorage.setItem(storageName, theme.current);
     $themeBtn.html(template);
   }
 
