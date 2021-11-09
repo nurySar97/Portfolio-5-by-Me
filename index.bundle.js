@@ -1,1 +1,237 @@
-(()=>{"use strict";var o,t={180:(o,t,e)=>{e(504);var r,a,n,s=e(638),l=e.n(s);l()("[data-filter]").on("click",(function(o){o.preventDefault();var t=l()(this).data("filter");"all"==t?l()("[data-cat]").removeClass("hide"):l()("[data-cat]").each((function(){l()(this).data("cat")!=t?l()(this).addClass("hide"):l()(this).removeClass("hide")}))})),r=l()("[data-modal]"),a=l()("[data-close]"),n=l()(".modal-work__slider"),r.on("click",(function(o){o.preventDefault();var t=l()(this).data("modal");l()(t).addClass("show"),l()("body").addClass("no-scroll"),setTimeout((function(){l()(t).find(".modal__dialog").css({transform:"rotateX(0)"})}),200),setTimeout((function(){n.slick("setPosition")}),25),n.slick("setPosition")})),a.on("click",(function(o){o.preventDefault();var t=l()(this).parents(".modal");t.find(".modal__dialog").css({transform:"rotateX(90deg)"}),setTimeout((function(){t.removeClass("show"),l()("body").removeClass("no-scroll")}),200)})),l()(".modal").on("click",(function(o){o.stopPropagation();var t=l()(this);t.find(".modal__dialog").css({transform:"rotateX(90deg)"}),setTimeout((function(){t.removeClass("show"),l()("body").removeClass("no-scroll")}),200)})),l()(".modal__dialog").on("click",(function(o){o.stopPropagation()})),function(){var o=l()(".modal-work__slider");o.on("click",(function(o){o.stopPropagation()})),o.slick({infinite:!0,slidesToShow:1,slidesToScroll:1,fade:!1,arrows:!1,dots:!0});var t=l()("#slick-slide-control00"),e=l()("#slick-slide-control01");t.on("click",(function(){t.css({backgroundColor:"#fff"}),e.css({backgroundColor:"transparent"})})),e.on("click",(function(){t.css({backgroundColor:"transparent"}),e.css({backgroundColor:"#fff"})})),window.onresize=function(){o.slick("setPosition")}}(),function(){var o=0;function t(){var t=l()(".burger__inner"),e=l()(".nav");switch(t.toggleClass("menu"),t.toggleClass("close"),o){case 0:return e.removeClass("transition"),e.toggleClass("left"),void(o=1);case 1:return e.toggleClass("left"),e.toggleClass("right"),void(o=2);case 2:return e.toggleClass("right"),e.toggleClass("left"),void(o=3);default:e.addClass("transition"),e.toggleClass("left"),o=0}}l()(".burger").on("click",t),l()(".nav").on("click",t)}();var i={current:localStorage.getItem("theme")||"light"},c=l()(".header__theme-btn");!function(){var o=function(){var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"light";return"assets/theme/".concat(o,".css")},t=function(){return{dark:'<i class="far fa-moon" />',light:'<i class="fas fa-sun" />'}[i.current]},e=l()('[href="'.concat(o(),'"]'));function r(t){e.attr("href",o(i.current)),localStorage.setItem("theme",i.current),c.html(t)}c.on("click",(function(){i.current="light"===i.current?"dark":"light",r(t())})),l()(window).on("load",(function(){r(t())}))}()}},e={};function r(o){var a=e[o];if(void 0!==a)return a.exports;var n=e[o]={exports:{}};return t[o].call(n.exports,n,n.exports,r),n.exports}r.m=t,o=[],r.O=(t,e,a,n)=>{if(!e){var s=1/0;for(d=0;d<o.length;d++){for(var[e,a,n]=o[d],l=!0,i=0;i<e.length;i++)(!1&n||s>=n)&&Object.keys(r.O).every((o=>r.O[o](e[i])))?e.splice(i--,1):(l=!1,n<s&&(s=n));if(l){o.splice(d--,1);var c=a();void 0!==c&&(t=c)}}return t}n=n||0;for(var d=o.length;d>0&&o[d-1][2]>n;d--)o[d]=o[d-1];o[d]=[e,a,n]},r.n=o=>{var t=o&&o.__esModule?()=>o.default:()=>o;return r.d(t,{a:t}),t},r.d=(o,t)=>{for(var e in t)r.o(t,e)&&!r.o(o,e)&&Object.defineProperty(o,e,{enumerable:!0,get:t[e]})},r.o=(o,t)=>Object.prototype.hasOwnProperty.call(o,t),(()=>{var o={826:0};r.O.j=t=>0===o[t];var t=(t,e)=>{var a,n,[s,l,i]=e,c=0;if(s.some((t=>0!==o[t]))){for(a in l)r.o(l,a)&&(r.m[a]=l[a]);if(i)var d=i(r)}for(t&&t(e);c<s.length;c++)n=s[c],r.o(o,n)&&o[n]&&o[n][0](),o[s[c]]=0;return r.O(d)},e=self.webpackChunk=self.webpackChunk||[];e.forEach(t.bind(null,0)),e.push=t.bind(null,e.push.bind(e))})();var a=r.O(void 0,[504],(()=>r(180)));a=r.O(a)})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./app/filter.js":
+/*!***********************!*\
+  !*** ./app/filter.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function () {\n  // Filter\n  var filter = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"[data-filter]\");\n  filter.on(\"click\", function (event) {\n    event.preventDefault();\n    var cat = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data(\"filter\");\n\n    if (cat == \"all\") {\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"[data-cat]\").removeClass(\"hide\");\n    } else {\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"[data-cat]\").each(function () {\n        var workCat = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data(\"cat\");\n\n        if (workCat != cat) {\n          jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass(\"hide\");\n        } else {\n          jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass(\"hide\");\n        }\n      });\n    }\n  });\n})());\n\n//# sourceURL=webpack:///./app/filter.js?");
+
+/***/ }),
+
+/***/ "./app/index.js":
+/*!**********************!*\
+  !*** ./app/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slick-carousel */ \"../node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter */ \"./app/filter.js\");\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal */ \"./app/modal.js\");\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.js */ \"./app/slider.js\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav */ \"./app/nav.js\");\n/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./theme */ \"./app/theme.js\");\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./app/index.js?");
+
+/***/ }),
+
+/***/ "./app/modal.js":
+/*!**********************!*\
+  !*** ./app/modal.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function () {\n  // Modal\n  var modalCall = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"[data-modal]\");\n  var modalClose = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"[data-close]\");\n  var slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".modal-work__slider\");\n  modalCall.on(\"click\", function (event) {\n    event.preventDefault();\n    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);\n    var modalId = $this.data(\"modal\");\n    jquery__WEBPACK_IMPORTED_MODULE_0___default()(modalId).addClass(\"show\");\n    jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"body\").addClass(\"no-scroll\"); // Animation\n\n    setTimeout(function () {\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(modalId).find(\".modal__dialog\").css({\n        transform: \"rotateX(0)\"\n      });\n    }, 200);\n    setTimeout(function () {\n      slider.slick(\"setPosition\");\n    }, 25);\n    slider.slick(\"setPosition\");\n  });\n  modalClose.on(\"click\", function (event) {\n    event.preventDefault();\n    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);\n    var modalParent = $this.parents(\".modal\");\n    modalParent.find(\".modal__dialog\").css({\n      transform: \"rotateX(90deg)\"\n    }); // Animation\n\n    setTimeout(function () {\n      modalParent.removeClass(\"show\");\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"body\").removeClass(\"no-scroll\");\n    }, 200);\n  });\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".modal\").on(\"click\", function (event) {\n    event.stopPropagation();\n    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);\n    $this.find(\".modal__dialog\").css({\n      transform: \"rotateX(90deg)\"\n    }); // Animation\n\n    setTimeout(function () {\n      $this.removeClass(\"show\");\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"body\").removeClass(\"no-scroll\");\n    }, 200);\n  });\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".modal__dialog\").on(\"click\", function (event) {\n    event.stopPropagation();\n  });\n})());\n\n//# sourceURL=webpack:///./app/modal.js?");
+
+/***/ }),
+
+/***/ "./app/nav.js":
+/*!********************!*\
+  !*** ./app/nav.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function () {\n  var cursor = 0;\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".burger\").on(\"click\", onHandleMenu);\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".nav\").on(\"click\", onHandleMenu);\n\n  function onHandleMenu() {\n    var $burger = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".burger__inner\");\n    var $nav = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".nav\");\n    $burger.toggleClass(\"menu\");\n    $burger.toggleClass(\"close\");\n\n    switch (cursor) {\n      case 0:\n        $nav.removeClass(\"transition\");\n        $nav.toggleClass(\"left\");\n        cursor = 1;\n        return;\n\n      case 1:\n        $nav.toggleClass(\"left\");\n        $nav.toggleClass(\"right\");\n        cursor = 2;\n        return;\n\n      case 2:\n        $nav.toggleClass(\"right\");\n        $nav.toggleClass(\"left\");\n        cursor = 3;\n        return;\n\n      default:\n        $nav.addClass(\"transition\");\n        $nav.toggleClass(\"left\");\n        cursor = 0;\n    }\n  }\n})());\n\n//# sourceURL=webpack:///./app/nav.js?");
+
+/***/ }),
+
+/***/ "./app/slider.js":
+/*!***********************!*\
+  !*** ./app/slider.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function () {\n  var slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".modal-work__slider\");\n  slider.on(\"click\", function (event) {\n    event.stopPropagation();\n  });\n  slider.slick({\n    infinite: true,\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    fade: false,\n    arrows: false,\n    dots: true\n  });\n  var slickButtonBack = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"#slick-slide-control00\");\n  var slickButtonNext = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"#slick-slide-control01\");\n  slickButtonBack.on(\"click\", function () {\n    slickButtonBack.css({\n      backgroundColor: \"#fff\"\n    });\n    slickButtonNext.css({\n      backgroundColor: \"transparent\"\n    });\n  });\n  slickButtonNext.on(\"click\", function () {\n    slickButtonBack.css({\n      backgroundColor: \"transparent\"\n    });\n    slickButtonNext.css({\n      backgroundColor: \"#fff\"\n    });\n  });\n\n  window.onresize = function () {\n    slider.slick(\"setPosition\");\n  };\n})());\n\n//# sourceURL=webpack:///./app/slider.js?");
+
+/***/ }),
+
+/***/ "./app/theme.js":
+/*!**********************!*\
+  !*** ./app/theme.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar sun = \"<i class=\\\"fas fa-sun\\\" />\";\nvar moon = \"<i class=\\\"far fa-moon\\\" />\";\nvar initTheme = localStorage.getItem(\"theme-webpack-portfolio\");\nvar theme = {\n  current: initTheme || \"light\"\n};\nvar $themeBtn = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".header__theme-btn\");\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function () {\n  var getTheme = function getTheme() {\n    var theme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"light\";\n    return \"assets/theme/\".concat(theme, \".css\");\n  };\n\n  var template = function template() {\n    var _icons = {\n      dark: moon,\n      light: sun\n    };\n    return _icons[theme.current];\n  };\n\n  var $styleSheet = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"[href=\\\"\".concat(getTheme(), \"\\\"]\"));\n  $themeBtn.on(\"click\", function () {\n    theme.current = theme.current === \"light\" ? \"dark\" : \"light\";\n    setTheme(template());\n  });\n\n  function setTheme(template) {\n    $styleSheet.attr(\"href\", getTheme(theme.current));\n    localStorage.setItem(\"theme\", theme.current);\n    $themeBtn.html(template);\n  }\n\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on(\"load\", function () {\n    setTheme(template());\n  });\n})());\n\n//# sourceURL=webpack:///./app/theme.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_slick-carousel_slick_slick_js"], () => (__webpack_require__("./app/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
