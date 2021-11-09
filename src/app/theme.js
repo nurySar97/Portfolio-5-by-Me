@@ -1,7 +1,7 @@
 import $ from "jquery";
 const sun = `<i class="fas fa-sun" />`;
 const moon = `<i class="far fa-moon" />`;
-const initTheme = localStorage.getItem("theme");
+const initTheme = localStorage.getItem("theme-webpack-portfolio");
 const theme = { current: initTheme || "light" };
 const $themeBtn = $(".header__theme-btn");
 
